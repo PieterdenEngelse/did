@@ -1,0 +1,48 @@
+{
+  "id": "did:web:antithese.ml",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:antithese.ml"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://antithese.ml/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/14038df8-3e48-40e7-b611-7d750ebc8d01"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#fd0af4712a634726810ad1981ee523bcvcSigningKey-ea6c6",
+      "controller": "did:web:antithese.ml",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "mf7w2vEIqCWUj1DLMOql8e6-S0MDLKlHoK8uWqquO2A",
+        "y": "_i1Q_gmMroluYmtR4kGsuXnaDS743g9gNpOGCqiZG48"
+      }
+    }
+  ],
+  "authentication": [
+    "#fd0af4712a634726810ad1981ee523bcvcSigningKey-ea6c6"
+  ],
+  "assertionMethod": [
+    "#fd0af4712a634726810ad1981ee523bcvcSigningKey-ea6c6"
+  ]
+}
